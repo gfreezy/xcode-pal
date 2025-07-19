@@ -55,8 +55,6 @@ When you first use the extension, macOS may ask for permission to allow VS Code 
 
 ## Release Notes
 
-## Release Notes
-
 ### 0.0.2 (2025-07-19)
 
 🔧 **Bug Fixes & Improvements**

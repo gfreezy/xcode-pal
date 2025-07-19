@@ -2,9 +2,10 @@
   "name": "xcode-pal",
   "displayName": "XCode Pal",
   "description": "Control Xcode from VS Code with seamless AppleScript integration - build, run, and open files",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "gfreezy",
   "license": "MIT",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.101.0"
   },

@@ -2,6 +2,22 @@
 
 All notable changes to the "xcode-pal" extension will be documented in this file.
 
+## [0.0.2] - 2025-07-19
+
+### Fixed
+- **Improved AppleScript Reliability**: Switched from Xcode AppleScript dictionary commands to System Events keyboard simulation for better compatibility
+- **Resolved "Can't get active scheme" Error**: Build and run operations now use keyboard shortcuts (Cmd+B, Cmd+R) instead of scheme-dependent commands
+- **Enhanced File Opening**: Simplified file opening mechanism for better reliability across different Xcode versions
+
+### Changed
+- Build command now uses `System Events` keyboard simulation (`Cmd+B`) instead of AppleScript dictionary
+- Run command now uses `System Events` keyboard simulation (`Cmd+R`) instead of AppleScript dictionary
+- File opening uses direct Xcode `open` command for better integration
+
+### Technical
+- Improved error handling and compatibility across Xcode versions
+- More reliable AppleScript execution without scheme dependencies
+
 ## [0.0.1] - 2025-07-18
 
 ### Added

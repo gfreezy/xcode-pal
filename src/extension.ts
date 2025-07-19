@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const runDisposable = vscode.commands.registerCommand('xcode-pal.xcodeRun', () => {
 		runXcodeScript(
-			'tell application "Xcode" to set buildResult to build active scheme',
+			'tell application "System Events" to tell process "Xcode" to keystroke "r" using {command down}',
 			'Xcode: Run triggered!',
 			'Failed to trigger Xcode Run'
 		);
@@ -31,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const buildDisposable = vscode.commands.registerCommand('xcode-pal.xcodeBuild', () => {
 		runXcodeScript(
-			'tell application "Xcode" to build active scheme',
+			'tell application "System Events" to tell process "Xcode" to keystroke "b" using {command down}',
 			'Xcode: Build triggered!',
 			'Failed to trigger Xcode Build'
 		);
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 		const filePath = editor.document.uri.fsPath;
 		runXcodeScript(
-			`tell application "Xcode" to activate\ntell application "Xcode" to open POSIX file "${filePath}"`,
+			`tell application "Xcode"\n\tactivate\n\topen "${filePath}"\nend tell`,
 			'Opened current file in Xcode!',
 			'Failed to open file in Xcode'
 		);

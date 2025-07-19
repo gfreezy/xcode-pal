@@ -55,6 +55,17 @@ When you first use the extension, macOS may ask for permission to allow VS Code 
 
 ## Release Notes
 
+## Release Notes
+
+### 0.0.2 (2025-07-19)
+
+🔧 **Bug Fixes & Improvements**
+
+- Fixed "Can't get active scheme" error by switching to keyboard simulation
+- Improved AppleScript reliability across different Xcode versions
+- Enhanced build and run operations using System Events
+- Simplified file opening mechanism for better compatibility
+
 ### 0.0.1 (2025-07-18)
 
 🎉 **Initial Release**
@@ -70,7 +81,7 @@ When you first use the extension, macOS may ask for permission to allow VS Code 
 
 ## Contributing
 
-Found a bug or have a feature request? Please open an issue on the [GitHub repository](https://github.com/your-username/xcode-pal).
+Found a bug or have a feature request? Please open an issue on the [GitHub repository](https://github.com/gfreezy/xcode-pal).
 
 ## License
 

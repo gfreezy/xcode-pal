@@ -12,18 +12,31 @@ export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "xcode-pal" is now active!');
 
 	const runXcodeScript = (script: string, successMsg: string, errorMsg: string) => {
-		exec(`osascript -e '${script}'`, (error, stdout, stderr) => {
+		console.log(`Executing AppleScript: ${script}`);
+		// Use delay to ensure proper execution order
+		const scriptWithDelay = `tell application "Xcode" to activate
+delay 0.5
+${script}`;
+		exec(`osascript -e '${scriptWithDelay}'`, (error, stdout, stderr) => {
+			console.log(`AppleScript stdout: ${stdout}`);
+			console.log(`AppleScript stderr: ${stderr}`);
 			if (error) {
-				vscode.window.showErrorMessage(`${errorMsg}: ${stderr || error.message}`);
+				console.error(`AppleScript error: ${error.message}`);
+				if (errorMsg) {
+					vscode.window.showErrorMessage(`${errorMsg}: ${stderr || error.message}`);
+				}
 			} else {
-				vscode.window.showInformationMessage(successMsg);
+				console.log('AppleScript executed successfully');
+				if (successMsg) {
+					vscode.window.showInformationMessage(successMsg);
+				}
 			}
 		});
 	};
 
 	const runDisposable = vscode.commands.registerCommand('xcode-pal.xcodeRun', () => {
 		runXcodeScript(
-			'tell application "System Events" to tell process "Xcode" to keystroke "r" using {command down}',
+			'tell application "System Events" to keystroke "r" using {command down}',
 			'Xcode: Run triggered!',
 			'Failed to trigger Xcode Run'
 		);
@@ -31,7 +44,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const buildDisposable = vscode.commands.registerCommand('xcode-pal.xcodeBuild', () => {
 		runXcodeScript(
-			'tell application "System Events" to tell process "Xcode" to keystroke "b" using {command down}',
+			'tell application "System Events" to keystroke "b" using {command down}',
 			'Xcode: Build triggered!',
 			'Failed to trigger Xcode Build'
 		);

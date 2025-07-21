@@ -2,6 +2,24 @@
 
 All notable changes to the "xcode-pal" extension will be documented in this file.
 
+## [0.0.4] - 2025-07-21
+
+### Fixed
+- **AppleScript Execution Issues**: Combined Xcode activation and keystroke commands into single AppleScript for better reliability
+- **Improved Error Handling**: Added detailed console logging and error reporting for better debugging
+
+### Changed
+- **Keyboard Shortcuts**: Changed from `Ctrl+Cmd` to `Ctrl+Alt` combinations for better compatibility
+  - Build: `Ctrl+Alt+B` (was `Ctrl+Cmd+B`)
+  - Run: `Ctrl+Alt+R` (was `Ctrl+Cmd+R`)
+  - Open in Xcode: `Ctrl+Alt+X` (was `Ctrl+Cmd+X`)
+- **AppleScript Optimization**: Single command now handles both Xcode activation and keystroke execution
+
+### Technical
+- Enhanced AppleScript reliability by removing separate activation step
+- Better error reporting with stdout/stderr logging
+- Simplified command execution flow
+
 ## [0.0.2] - 2025-07-19
 
 ### Fixed

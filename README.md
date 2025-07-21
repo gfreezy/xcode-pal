@@ -10,9 +10,9 @@
 - **Open Files**: Open the current file in Xcode with automatic focus switching
 
 ### ⌨️ Keyboard Shortcuts
-- `Ctrl+Cmd+B` - Build Project in Xcode
-- `Ctrl+Cmd+R` - Run Project in Xcode
-- `Ctrl+Cmd+X` - Open Current File in Xcode
+- `Ctrl+Alt+B` - Build Project in Xcode
+- `Ctrl+Alt+R` - Run Project in Xcode
+- `Ctrl+Alt+X` - Open Current File in Xcode
 
 ### 🎯 Smart Focus Management
 - Build and run operations happen in the background, keeping VS Code in focus
@@ -54,6 +54,15 @@ When you first use the extension, macOS may ask for permission to allow VS Code 
 - Xcode must be running for build/run commands to work (opening files will launch Xcode if needed)
 
 ## Release Notes
+
+### 0.0.3 (2025-07-21)
+
+🔧 **Bug Fixes & Improvements**
+
+- Fixed AppleScript execution issues by combining activate and keystroke commands
+- Changed keyboard shortcuts from `Ctrl+Cmd` to `Ctrl+Alt` for better compatibility
+- Improved error handling and debugging with detailed console logging
+- Enhanced AppleScript reliability for build and run operations
 
 ### 0.0.2 (2025-07-19)
 

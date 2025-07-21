@@ -2,7 +2,7 @@
   "name": "xcode-pal",
   "displayName": "XCode Pal",
   "description": "Control Xcode from VS Code with seamless AppleScript integration - build, run, and open files",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "gfreezy",
   "license": "MIT",
   "icon": "icon.png",
@@ -52,20 +52,18 @@
     "keybindings": [
       {
         "command": "xcode-pal.xcodeRun",
-        "key": "ctrl+cmd+r",
-        "mac": "ctrl+cmd+r",
-        "when": "editorTextFocus"
+        "key": "ctrl+alt+r",
+        "mac": "ctrl+alt+r"
       },
       {
         "command": "xcode-pal.xcodeBuild",
-        "key": "ctrl+cmd+b",
-        "mac": "ctrl+cmd+b",
-        "when": "editorTextFocus"
+        "key": "ctrl+alt+b",
+        "mac": "ctrl+alt+b"
       },
       {
         "command": "xcode-pal.openInXcode",
-        "key": "ctrl+cmd+x",
-        "mac": "ctrl+cmd+x",
+        "key": "ctrl+alt+x",
+        "mac": "ctrl+alt+x",
         "when": "editorTextFocus"
       }
     ]

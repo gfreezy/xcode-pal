@@ -2,6 +2,12 @@
 
 All notable changes to the "xcode-pal" extension will be documented in this file.
 
+## [0.0.5] - 2025-07-22
+
+### Fixed
+- **VS Code Version Compatibility**: Updated extension to support VS Code 1 and higher
+- **AppleScript Execution**: Improved AppleScript execution for better reliability
+
 ## [0.0.4] - 2025-07-21
 
 ### Fixed

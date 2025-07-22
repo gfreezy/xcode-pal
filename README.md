@@ -53,37 +53,6 @@ When you first use the extension, macOS may ask for permission to allow VS Code 
 - May require accessibility permissions to be granted to VS Code
 - Xcode must be running for build/run commands to work (opening files will launch Xcode if needed)
 
-## Release Notes
-
-### 0.0.3 (2025-07-21)
-
-🔧 **Bug Fixes & Improvements**
-
-- Fixed AppleScript execution issues by combining activate and keystroke commands
-- Changed keyboard shortcuts from `Ctrl+Cmd` to `Ctrl+Alt` for better compatibility
-- Improved error handling and debugging with detailed console logging
-- Enhanced AppleScript reliability for build and run operations
-
-### 0.0.2 (2025-07-19)
-
-🔧 **Bug Fixes & Improvements**
-
-- Fixed "Can't get active scheme" error by switching to keyboard simulation
-- Improved AppleScript reliability across different Xcode versions
-- Enhanced build and run operations using System Events
-- Simplified file opening mechanism for better compatibility
-
-### 0.0.1 (2025-07-18)
-
-🎉 **Initial Release**
-
-- Added Xcode build integration with background execution
-- Added Xcode run integration with background execution
-- Added file opening in Xcode with focus switching
-- Implemented AppleScript-based communication
-- Added keyboard shortcuts that don't conflict with VS Code defaults
-- Added Command Palette integration
-
 ---
 
 ## Contributing
